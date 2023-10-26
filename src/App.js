@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-        Detail information on setup the react web Updated at 20th Oct 2023   
+        Detail information on setup the react web Updated at 26th Oct 2023   
         </a>
       </header>
     </div>
