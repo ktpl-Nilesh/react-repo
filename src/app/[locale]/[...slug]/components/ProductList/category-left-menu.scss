@@ -1,0 +1,105 @@
+@import "../../../../../common/styles/theme-colors.scss";
+
+.category-sidebar {
+  .category-nav {
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 27px;
+      margin-bottom: 7px;
+    }
+  }
+}
+.cat-navbar {
+  ul {
+    > li {
+      > a {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 7px;
+      }
+    }
+    li {
+      a {
+        &.active {
+          background: $greyf2;
+          padding: 4px 8px;
+
+          .grocery & {
+            background-color: $colord2;
+            color: $green3a;
+          }
+
+          &:hover {
+            background-color: $lightblue;
+            color: $blue;
+
+            .grocery & {
+              background-color: $colord2;
+            }
+          }
+        }
+        &:hover {
+          color: $lightblue;
+
+          .grocery & {
+            color: $green3a;
+          }
+        }
+      }
+    }
+  }
+  .cat-nav-list {
+    .menu-1,
+    .menu-2 {
+      margin-left: 16px;
+    }
+  }
+  .toggle-level {
+    font-size: 0;
+    &::before {
+      font-family: "hnak";
+      display: inline-block;
+      vertical-align: top;
+      font-size: 7px;
+      margin-right: 8px;
+      content: "\e916";
+      transform: rotate(0deg);
+
+      html[lang="ar"] & {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+    &.up {
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .product-category {
+    .category-sidebar {
+      position: fixed !important;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 52px);
+      max-width: 100%;
+      background: $color-white;
+      z-index: 7;
+      padding: 25px;
+      overflow-y: auto;
+      transition: ease all 0.5s;
+
+      &.show {
+        top: 0;
+      }
+    }
+  }
+}

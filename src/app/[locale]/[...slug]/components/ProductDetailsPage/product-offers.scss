@@ -1,0 +1,131 @@
+@import "../../../../../common/styles/theme-colors.scss";
+
+.offer-box {
+  background-color: $greyf9;
+  padding: 14px 13px 16px;
+  margin-top: 25px;
+
+  .box-text-content {
+    position: relative;
+    padding: 0 0 0 28px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+
+    html[lang="ar"] & {
+      padding: 0 40px 0 0;
+    }
+
+    strong {
+      color: $orange71;
+      font-weight: 600;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "\e927";
+      font-family: hnak;
+      font-size: 20px;
+      color: $orange72;
+      line-height: 20px;
+      font-weight: normal;
+      vertical-align: top;
+      display: inline-block;
+
+      html[lang="ar"] & {
+        left: inherit;
+        right: 0;
+      }
+    }
+  }
+  .offer-header {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    border-top: solid 1px $color-black;
+    padding: 12px 0 0 0;
+    margin: 12px 0 0 0;
+    color: $color-black;
+    cursor: pointer;
+
+    strong {
+      color: $orange71;
+      font-weight: 700;
+      text-decoration: underline;
+      display: inline-block;
+    }
+  }
+  .toggle-data {
+    border-bottom: 1px solid $color-black;
+    padding: 0 0 12px 0;
+    position: relative;
+  }
+
+  li {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    border-bottom: solid 1px $color-black;
+    padding: 12px 0;
+    position: relative;
+  }
+  .view-more {
+    margin-top: 16px;
+    cursor: pointer;
+
+    span {
+      font-size: 16px;
+      line-height: 24px;
+      color: $color-black;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+  .collapse-content {
+    background-color: $color-white;
+    max-height: 324px;
+    overflow-y: auto;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    transition: all 0.2s;
+    transform: scaleY(0);
+    transform-origin: top;
+
+    &.active {
+      transform: scaleY(1);
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 18px;
+      color: $black3a;
+      margin-bottom: 20px;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .offer-box {
+    position: relative;
+    padding: 20px 10px;
+
+    .view-more {
+      position: absolute;
+      top: 4px;
+      right: 10px;
+
+      html[lang="ar"] & {
+        right: inherit;
+        left: 10px;
+      }
+    }
+  }
+}

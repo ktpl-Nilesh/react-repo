@@ -1,0 +1,78 @@
+@import "styles/theme-colors.scss";
+
+.country-list-wrapper {
+  .dropdown-country {
+    position: static;
+    .dropdown-toggle {
+      background-color: transparent;
+      width: 100%;
+      min-width: 93px;
+      width: auto;
+      height: 40px;
+      border: 1px solid $black3a;
+      display: inline-flex;
+      position: relative;
+      font-family: "poppins";
+      font-size: 14px !important;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      column-gap: 5px;
+
+      html[lang="ar"] & {
+        left: inherit;
+        right: 0;
+      }
+
+      span {
+        align-self: center;
+        &:first-child {
+          margin-top: 4px;
+          margin-right: 4px;
+        }
+        svg {
+          width: 22px;
+        }
+      }
+    }
+    ul.dropdown-menu {
+      display: none;
+      top: 40px;
+      left: 0;
+      padding: 5px 0;
+      margin: 0;
+
+      html[lang="ar"] & {
+        left: inherit;
+        right: 0;
+      }
+      li {
+        column-gap: 10px;
+        font-size: 12px;
+        padding: 5px 13px;
+
+        span {
+          line-height: 1.5;
+        }
+        svg {
+          width: 22px;
+          float: left;
+          border: 1px solid #ccc;
+        }
+        a {
+          font-size: 14px !important;
+        }
+      }
+    }
+    &.open {
+      ul.dropdown-menu {
+        display: block;
+      }
+    }
+  }
+}
+.country-input-field {
+  position: relative;
+}
