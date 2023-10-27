@@ -1,0 +1,36 @@
+.minicart {
+  margin-left: 30px;
+  flex-shrink: 0;
+  position: relative;
+
+  html[lang="ar-sa"] & {
+    margin-right: 30px;
+    margin-left: 0;
+  }
+
+  &:hover {
+    .common-popup {
+      display: block;
+    }
+    .minicart-icon > span {
+      background: url("/assets/images/cart-hover.svg") no-repeat center center;
+    }
+  }
+
+  .minicart-icon {
+    > span {
+      width: 25px;
+      height: 25px;
+      background: url("/assets/images/Cart.svg") no-repeat center center;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .minicart {
+    margin: 0 !important;
+  }
+}

@@ -1,0 +1,50 @@
+@import "styles/theme-colors.scss";
+
+input[type="checkbox"] {
+  display: none;
+
+  + label {
+    font-size: 14px;
+    line-height: 18px;
+    color: $grey89;
+    padding-left: 30px;
+    position: relative;
+	
+	html[lang="ar"] & {
+		padding-left: 0;
+		padding-right: 30px;
+	}
+
+    &:before {
+      width: 18px;
+      height: 18px;
+      border: 1px solid $blue;
+      content: "";
+      left: 0;
+      top: 0;
+      position: absolute;
+	  
+	  html[lang="ar"] & {
+		left:inherit;
+		right:0;
+	  }
+    }
+  }
+  &:checked {
+    + label {
+      &:before {
+        border-color: $blue;
+        background: $blue url("/assets/images/check-tick.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        .grocery & {
+          background: $green3a url("/assets/images/check-tick.svg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          border-color: $green3a !important;
+        }
+      }
+    }
+  }
+}

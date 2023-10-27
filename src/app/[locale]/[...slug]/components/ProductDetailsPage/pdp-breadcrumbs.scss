@@ -1,0 +1,31 @@
+@import "styles/theme-colors.scss";
+
+.pdp-breadcrumbs {
+  ul.breadcrumb-list {
+    padding: 20px 0;
+    li {
+      display: flex;
+      align-items: center;
+      float: left;
+      &:not(.active)::after {
+        content: ">";
+        display: block;
+        margin: 0 5px;
+      }
+      a {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: $color-black;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+      }
+      .active {
+        color: $black55;
+        opacity: 0.8;
+        text-decoration: underline;
+        font-weight: bold;
+      }
+    }
+  }
+}
